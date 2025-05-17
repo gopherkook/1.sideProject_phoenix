@@ -37,9 +37,12 @@
     "bootstrap": "^5.3.5",
     "chokidar": "^3.6.0",
     "classnames": "^2.3.2",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.7",
     "dhtmlx-gantt": "^8.0.1",
+    "dotenv": "^16.5.0",
     "echarts-for-react": "^3.0.2",
+    "express": "^5.1.0",
     "feather-icons-react": "^0.6.2",
     "fs-extra": "^11.2.0",
     "fslightbox-react": "^1.7.6",
@@ -81,16 +84,17 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .js,jsx,ts,tsx,json ./src",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "predeploy": "npm run build && cp ./dist/index.html ./dist/404.html",
     "predeploy:alt": "npm run build && cp ./dist/index.html ./dist/404.html",
-    "deploy": "echo https://phoenix-react.prium.me > ./dist/CNAME && gh-pages -d dist",
-    "deploy:alt": "echo phoenix-react-alt.prium.me > ./dist/CNAME && gh-pages -d dist -r git@github.com:prium/phoenix-react-alt.git"
+    "deploy": "npm run build && firebase deploy",
+    "deploy:alt": "echo phoenix-react-alt.prium.me > ./dist/CNAME && gh-pages -d dist -r git@github.com:prium/phoenix-react-alt.git",
+    "server": "node server/index.js",
+    "dev:server": "nodemon server/index.js"
   },
   "browserslist": {
     "production": [
@@ -124,6 +128,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "glob": "^10.3.4",
+    "nodemon": "^3.1.10",
     "prettier": "^3.0.3",
     "sass": "^1.64.2",
     "typescript": "^5.2.2"
