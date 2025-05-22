@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import { useAppContext } from 'providers/AppProvider';
 import { Navbar } from 'react-bootstrap';
 import logo from 'assets/img/icons/logo.png';
+import logoWorkwolf from 'assets/img/icons/logo-workwolf-white.png';
+
 import { useBreakpoints } from 'providers/BreakpointsProvider';
 import NavbarToggleButton from './NavbarToggleButton';
 import { Link } from 'react-router-dom';
@@ -33,8 +35,23 @@ const NavbarBrand = () => {
             </>
           ) : (
             <div className="d-flex align-items-center">
-              <img src={logo} alt="phoenix" width={27} />
-              <p className="logo-text ms-2 d-none d-sm-block">JipsaEngine</p>
+              {/* <img src={logo} alt="phoenix" width={27} /> */}
+              <img src={logoWorkwolf} alt="workwolf" width={27} />
+              <p 
+                className="logo-text ms-2 d-none d-sm-block"
+                style={{
+                  fontFamily: "'Rajdhani', sans-serif",
+                  fontSize: '1.5rem',
+                  letterSpacing: '2px', 
+                  color: '#ffffff',
+                  fontWeight: '700',
+                  textTransform: 'none',
+                  marginBottom: 0,
+                  textShadow: '0 0 3px rgba(255,255,255,0.3)',
+                }}
+              >
+                WorkWolf
+              </p>
             </div>
           )}
         </Navbar.Brand>

@@ -1,4 +1,5 @@
-import logo from 'assets/img/icons/logo.png';
+// import logo from 'assets/img/icons/logo.png';
+import logoWorkwolfWhite from 'assets/img/icons/logo-workwolf-white.png';
 import classNames from 'classnames';
 
 const PhoenixLoader = ({ fullPage }: { fullPage?: boolean }) => {
@@ -12,11 +13,16 @@ const PhoenixLoader = ({ fullPage }: { fullPage?: boolean }) => {
       )}
     >
       <div>
-        <img src={logo} alt="phoenix" className="logo-ripple ripple-1" />
-        <img src={logo} alt="phoenix" className="logo-ripple ripple-2" />
-        <img src={logo} alt="phoenix" className="logo-ripple ripple-3" />
-        <img src={logo} alt="phoenix" className="logo-ripple ripple-4" />
-        <img src={logo} alt="phoenix" className="logo-ripple ripple-5" />
+        {/* <img src={logo} alt="phoenix" className="logo-ripple ripple-1" /> */}
+        {/* <img src={logo} alt="phoenix" className="logo-ripple ripple-2" /> */}
+        {/* <img src={logo} alt="phoenix" className="logo-ripple ripple-3" /> */}
+        {/* <img src={logo} alt="phoenix" className="logo-ripple ripple-4" /> */}
+        {/* <img src={logo} alt="phoenix" className="logo-ripple ripple-5" /> */}
+        <img src={logoWorkwolfWhite} alt="workwolf" className="logo-ripple ripple-1" />
+        <img src={logoWorkwolfWhite} alt="workwolf" className="logo-ripple ripple-2" />
+        <img src={logoWorkwolfWhite} alt="workwolf" className="logo-ripple ripple-3" />
+        <img src={logoWorkwolfWhite} alt="workwolf" className="logo-ripple ripple-4" />
+        <img src={logoWorkwolfWhite} alt="workwolf" className="logo-ripple ripple-5" />
       </div>
     </div>
   );
