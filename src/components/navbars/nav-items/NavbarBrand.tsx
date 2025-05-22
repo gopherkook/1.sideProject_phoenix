@@ -36,7 +36,7 @@ const NavbarBrand = () => {
           ) : (
             <div className="d-flex align-items-center">
               {/* <img src={logo} alt="phoenix" width={27} /> */}
-              <img src={logoWorkwolf} alt="workwolf" width={27} />
+              <img src={logoWorkwolf} alt="workwolf" width={33} />
               <p 
                 className="logo-text ms-2 d-none d-sm-block"
                 style={{
