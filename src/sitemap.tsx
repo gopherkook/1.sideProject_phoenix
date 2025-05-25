@@ -46,47 +46,11 @@ export const routes: RouteItems[] = [
     labelDisabled: true,
     pages: [
       {
-        name: 'home',
+        name: 'Dashboard',
         icon: 'pie-chart',
+        path: '/dashboard/project-management',
+        pathName: 'project-management-dashbaord',
         active: true,
-        flat: true,
-        pages: [
-          {
-            name: 'e-commerce',
-            path: '/',
-            pathName: 'default-dashboard',
-            topNavIcon: 'shopping-cart',
-            active: true,
-          },
-          {
-            name: 'project-management',
-            path: '/dashboard/project-management',
-            pathName: 'project-management-dashbaord',
-            topNavIcon: 'clipboard',
-            active: true,
-          },
-          {
-            name: 'CRM',
-            path: '/dashboard/crm',
-            pathName: 'crm',
-            topNavIcon: 'phone',
-            active: true,
-          },
-          {
-            name: 'Travel Agency',
-            path: '/dashboard/travel-agency',
-            pathName: 'travel-agency',
-            topNavIcon: 'briefcase',
-            active: true,
-          },
-          {
-            name: 'social-feed',
-            path: '/apps/social/feed',
-            pathName: 'social-feed',
-            topNavIcon: 'share-2',
-            active: true,
-          },
-        ],
       },
     ],
   },
@@ -94,6 +58,133 @@ export const routes: RouteItems[] = [
     label: 'apps',
     icon: UilCube,
     pages: [
+      {
+        name: 'calendar',
+        icon: 'calendar',
+        path: 'apps/calendar',
+        pathName: 'app-calendar',
+        active: true,
+      },
+      {
+        name: 'kanban',
+        icon: 'trello',
+        active: true,
+        pages: [
+          {
+            name: 'Kanban',
+            path: '/apps/kanban/kanban',
+            pathName: 'app-kanban',
+            active: true,
+          },
+          {
+            name: 'boards',
+            path: '/apps/kanban/boards',
+            pathName: 'kanban-boards',
+            active: true,
+          },
+          {
+            name: 'create board',
+            path: '/apps/kanban/create-board',
+            pathName: 'create-kanban-board',
+            active: true,
+          },
+        ],
+      },
+      {
+        name: 'project-management',
+        icon: 'clipboard',
+        active: true,
+        pages: [
+          {
+            name: 'create new',
+            path: '/apps/project-management/create-new',
+            pathName: 'project-management-create-new',
+            active: true,
+          },
+          {
+            name: 'project-list-view',
+            path: '/apps/project-management/project-list-view',
+            pathName: 'project-management-project-list-view',
+            active: true,
+          },
+          {
+            name: 'project-card-view',
+            path: '/apps/project-management/project-card-view',
+            pathName: 'project-management-project-card-view',
+            active: true,
+          },
+          {
+            name: 'project-board-view',
+            path: '/apps/project-management/project-board-view',
+            pathName: 'project-management-project-board-view',
+            active: true,
+          },
+          {
+            name: 'todo-list',
+            path: '/apps/project-management/todo-list',
+            pathName: 'project-management-todo-list',
+            active: true,
+          },
+          {
+            name: 'project-details',
+            path: '/apps/project-management/project-details',
+            pathName: 'project-management-project-details',
+            active: true,
+          },
+        ],
+      },
+      {
+        name: 'File manager',
+        icon: 'folder',
+        active: true,
+        new: true,
+        pages: [
+          {
+            name: 'Grid view',
+            path: 'apps/file-manager/grid-view',
+            pathName: 'file-grid-view',
+            active: true,
+          },
+          {
+            name: 'List view',
+            path: 'apps/file-manager/list-view',
+            pathName: 'file-list-view',
+            active: true,
+          },
+        ],
+      },
+      {
+        name: 'chat',
+        icon: 'message-square',
+        path: '/apps/chat',
+        pathName: 'app-chat',
+        active: true,
+      },
+      {
+        name: 'email',
+        icon: 'mail',
+        active: true,
+        pages: [
+          {
+            name: 'inbox',
+            path: '/apps/email/inbox',
+            pathName: 'email-inbox',
+            active: true,
+          },
+          {
+            name: 'email-detail',
+            path: '/apps/email/email-detail',
+            pathName: 'email-detail',
+            active: true,
+          },
+          {
+            name: 'compose',
+            path: '/apps/email/compose',
+            pathName: 'email-compose',
+            active: true,
+          },
+        ],
+      },
       {
         name: 'e-commerce',
         active: true,
@@ -276,222 +367,149 @@ export const routes: RouteItems[] = [
           },
         ],
       },
-      {
-        name: 'project-management',
-        icon: 'clipboard',
-        active: true,
-        pages: [
-          {
-            name: 'create new',
-            path: '/apps/project-management/create-new',
-            pathName: 'project-management-create-new',
-            active: true,
-          },
-          {
-            name: 'project-list-view',
-            path: '/apps/project-management/project-list-view',
-            pathName: 'project-management-project-list-view',
-            active: true,
-          },
-          {
-            name: 'project-card-view',
-            path: '/apps/project-management/project-card-view',
-            pathName: 'project-management-project-card-view',
-            active: true,
-          },
-          {
-            name: 'project-board-view',
-            path: '/apps/project-management/project-board-view',
-            pathName: 'project-management-project-board-view',
-            active: true,
-          },
-          {
-            name: 'todo-list',
-            path: '/apps/project-management/todo-list',
-            pathName: 'project-management-todo-list',
-            active: true,
-          },
-          {
-            name: 'project-details',
-            path: '/apps/project-management/project-details',
-            pathName: 'project-management-project-details',
-            active: true,
-          },
-        ],
-      },
-      {
-        name: 'travel-agency',
-        hasNew: true,
-        icon: 'briefcase',
-        active: true,
-        pages: [
-          {
-            name: 'landing',
-            path: '/apps/travel-agency/landing',
-            pathName: 'travel-agency-landing',
-            active: true,
-          },
-          {
-            name: 'hotel',
-            active: true,
-            pages: [
-              {
-                name: 'admin',
-                active: true,
-                pages: [
-                  {
-                    name: 'add-property',
-                    path: '/apps/travel-agency/hotel/admin/add-property',
-                    pathName: 'travel-agency-add-property',
-                    active: true,
-                  },
-                  {
-                    name: 'add-room',
-                    path: 'apps/travel-agency/hotel/admin/add-room',
-                    pathName: 'travel-agency-add-room',
-                    active: true,
-                  },
-                  {
-                    name: 'room-listing',
-                    path: 'apps/travel-agency/hotel/admin/room-listing',
-                    pathName: 'travel-agency-room-listing',
-                    active: true,
-                  },
-                  {
-                    name: 'search-room',
-                    path: 'apps/travel-agency/hotel/admin/search-room',
-                    pathName: 'travel-agency-search-room',
-                    active: true,
-                  },
-                ],
-              },
-              {
-                name: 'customer',
-                active: true,
-                pages: [
-                  {
-                    name: 'homepage',
-                    path: '/apps/travel-agency/hotel/customer/homepage',
-                    pathName: 'hotel-homepage',
-                    active: true,
-                  },
-                  {
-                    name: 'hotel-details',
-                    path: '/apps/travel-agency/hotel/customer/hotel-details',
-                    pathName: 'hotel-details',
-                    active: true,
-                  },
-                  {
-                    name: 'hotel-compare',
-                    path: '/apps/travel-agency/hotel/customer/hotel-compare',
-                    pathName: 'hotel-compare',
-                    active: true,
-                  },
-                  {
-                    name: 'checkout',
-                    path: '/apps/travel-agency/hotel/customer/checkout',
-                    pathName: 'hotel-checkout',
-                    active: true,
-                  },
-                  {
-                    name: 'payment',
-                    path: '/apps/travel-agency/hotel/customer/payment',
-                    pathName: 'hotel-payment',
-                    active: true,
-                  },
-                  {
-                    name: 'gallery',
-                    path: '/apps/travel-agency/hotel/customer/gallery',
-                    pathName: 'hotel-gallery',
-                    active: true,
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            name: 'flight',
-            active: true,
-            pages: [
-              {
-                name: 'homepage',
-                active: true,
-                path: '/apps/travel-agency/flight/homepage',
-                pathName: 'flight-homepage',
-              },
-              {
-                name: 'booking',
-                active: true,
-                path: '/apps/travel-agency/flight/booking',
-                pathName: 'flight-booking',
-              },
-              {
-                name: 'payment',
-                active: true,
-                path: '/apps/travel-agency/flight/payment',
-                pathName: 'flight-payment',
-              },
-            ],
-          },
-          {
-            name: 'trip',
-            active: true,
-            new: true,
-            pages: [
-              {
-                name: 'homepage',
-                active: true,
-                path: '/apps/travel-agency/trip/homepage',
-                pathName: 'trip-homepage',
-              },
-              {
-                name: 'trip-details',
-                active: true,
-                path: '/apps/travel-agency/trip/trip-details',
-                pathName: 'trip-details',
-              },
-              {
-                name: 'checkout',
-                active: true,
-                path: '/apps/travel-agency/trip/checkout',
-                pathName: 'checkout',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'chat',
-        icon: 'message-square',
-        path: '/apps/chat',
-        pathName: 'app-chat',
-        active: true,
-      },
-      {
-        name: 'email',
-        icon: 'mail',
-        active: true,
-        pages: [
-          {
-            name: 'inbox',
-            path: '/apps/email/inbox',
-            pathName: 'email-inbox',
-            active: true,
-          },
-          {
-            name: 'email-detail',
-            path: '/apps/email/email-detail',
-            pathName: 'email-detail',
-            active: true,
-          },
-          {
-            name: 'compose',
-            path: '/apps/email/compose',
-            pathName: 'email-compose',
-            active: true,
-          },
-        ],
-      },
+     
+      // {
+      //   name: 'travel-agency',
+      //   hasNew: true,
+      //   icon: 'briefcase',
+      //   active: true,
+      //   pages: [
+      //     {
+      //       name: 'landing',
+      //       path: '/apps/travel-agency/landing',
+      //       pathName: 'travel-agency-landing',
+      //       active: true,
+      //     },
+      //     {
+      //       name: 'hotel',
+      //       active: true,
+      //       pages: [
+      //         {
+      //           name: 'admin',
+      //           active: true,
+      //           pages: [
+      //             {
+      //               name: 'add-property',
+      //               path: '/apps/travel-agency/hotel/admin/add-property',
+      //               pathName: 'travel-agency-add-property',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'add-room',
+      //               path: 'apps/travel-agency/hotel/admin/add-room',
+      //               pathName: 'travel-agency-add-room',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'room-listing',
+      //               path: 'apps/travel-agency/hotel/admin/room-listing',
+      //               pathName: 'travel-agency-room-listing',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'search-room',
+      //               path: 'apps/travel-agency/hotel/admin/search-room',
+      //               pathName: 'travel-agency-search-room',
+      //               active: true,
+      //             },
+      //           ],
+      //         },
+      //         {
+      //           name: 'customer',
+      //           active: true,
+      //           pages: [
+      //             {
+      //               name: 'homepage',
+      //               path: '/apps/travel-agency/hotel/customer/homepage',
+      //               pathName: 'hotel-homepage',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'hotel-details',
+      //               path: '/apps/travel-agency/hotel/customer/hotel-details',
+      //               pathName: 'hotel-details',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'hotel-compare',
+      //               path: '/apps/travel-agency/hotel/customer/hotel-compare',
+      //               pathName: 'hotel-compare',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'checkout',
+      //               path: '/apps/travel-agency/hotel/customer/checkout',
+      //               pathName: 'hotel-checkout',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'payment',
+      //               path: '/apps/travel-agency/hotel/customer/payment',
+      //               pathName: 'hotel-payment',
+      //               active: true,
+      //             },
+      //             {
+      //               name: 'gallery',
+      //               path: '/apps/travel-agency/hotel/customer/gallery',
+      //               pathName: 'hotel-gallery',
+      //               active: true,
+      //             },
+      //           ],
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       name: 'flight',
+      //       active: true,
+      //       pages: [
+      //         {
+      //           name: 'homepage',
+      //           active: true,
+      //           path: '/apps/travel-agency/flight/homepage',
+      //           pathName: 'flight-homepage',
+      //         },
+      //         {
+      //           name: 'booking',
+      //           active: true,
+      //           path: '/apps/travel-agency/flight/booking',
+      //           pathName: 'flight-booking',
+      //         },
+      //         {
+      //           name: 'payment',
+      //           active: true,
+      //           path: '/apps/travel-agency/flight/payment',
+      //           pathName: 'flight-payment',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       name: 'trip',
+      //       active: true,
+      //       new: true,
+      //       pages: [
+      //         {
+      //           name: 'homepage',
+      //           active: true,
+      //           path: '/apps/travel-agency/trip/homepage',
+      //           pathName: 'trip-homepage',
+      //         },
+      //         {
+      //           name: 'trip-details',
+      //           active: true,
+      //           path: '/apps/travel-agency/trip/trip-details',
+      //           pathName: 'trip-details',
+      //         },
+      //         {
+      //           name: 'checkout',
+      //           active: true,
+      //           path: '/apps/travel-agency/trip/checkout',
+      //           pathName: 'checkout',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
+    
       {
         name: 'events',
         icon: 'bookmark',
@@ -507,31 +525,6 @@ export const routes: RouteItems[] = [
             name: 'Event detail',
             path: '/apps/events/event-detail',
             pathName: 'event-detail',
-            active: true,
-          },
-        ],
-      },
-      {
-        name: 'kanban',
-        icon: 'trello',
-        active: true,
-        pages: [
-          {
-            name: 'Kanban',
-            path: '/apps/kanban/kanban',
-            pathName: 'app-kanban',
-            active: true,
-          },
-          {
-            name: 'boards',
-            path: '/apps/kanban/boards',
-            pathName: 'kanban-boards',
-            active: true,
-          },
-          {
-            name: 'create board',
-            path: '/apps/kanban/create-board',
-            pathName: 'create-kanban-board',
             active: true,
           },
         ],
@@ -555,33 +548,7 @@ export const routes: RouteItems[] = [
           },
         ],
       },
-      {
-        name: 'File manager',
-        icon: 'folder',
-        active: true,
-        new: true,
-        pages: [
-          {
-            name: 'Grid view',
-            path: 'apps/file-manager/grid-view',
-            pathName: 'file-grid-view',
-            active: true,
-          },
-          {
-            name: 'List view',
-            path: 'apps/file-manager/list-view',
-            pathName: 'file-list-view',
-            active: true,
-          },
-        ],
-      },
-      {
-        name: 'calendar',
-        icon: 'calendar',
-        path: 'apps/calendar',
-        pathName: 'app-calendar',
-        active: true,
-      },
+      
     ],
   },
   {
